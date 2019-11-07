@@ -60,5 +60,8 @@
 					target: $body,
 					visibleClass: 'navPanel-visible'
 				});
-
+		//load dynamic data
+		$.get( "/api/data", function( data ) {
+			$( "#banner header h2" ).text( data );
+		});
 })(jQuery);
