@@ -62,6 +62,6 @@
 				});
 		//load dynamic data
 		$.get( "/api/data", function( data ) {
-			$( "#banner header h2" ).text( data );
+			$( "#banner header h2" ).text( data[0].title );
 		});
 })(jQuery);
