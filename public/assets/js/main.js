@@ -61,7 +61,7 @@
 					visibleClass: 'navPanel-visible'
 				});
 		//load dynamic data
-		$.get( "/api/data", function( data ) {
-			$( "#banner header h2" ).text( JSON.stringify(data)[0].title );
+		$.getJSON( "/api/data", function( data ) {
+			$( "#banner header h2" ).text( data[0].title );
 		});
 })(jQuery);
